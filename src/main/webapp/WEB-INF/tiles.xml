@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">  
+<tiles-definitions>  
+    <definition name="web.user" template="/WEB-INF/layout/index.jsp">  
+        <put-attribute name="header" value="/WEB-INF/layout/_header.jsp" />  
+        <put-attribute name="menu" value="/WEB-INF/layout/_menu.jsp" />  
+        <put-attribute name="aside" value="/WEB-INF/layout/_aside.jsp" />  
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/layout/_footer.jsp" />  
+    </definition>  
+   
+   <definition name="user/*/*" extends="web.user">
+           <put-attribute name="body" value="/WEB-INF/view/{1}/{2}.jsp" />  
+   </definition>
+   
+   
+    <definition name="web.admin" template="/WEB-INF/layout2/index.jsp">  
+        <put-attribute name="header" value="/WEB-INF/layout2/_header.jsp" />  
+        <put-attribute name="menu" value="/WEB-INF/layout2/_menu.jsp" />  
+        <put-attribute name="aside" value="/WEB-INF/layout2/_aside.jsp" />  
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/layout2/_footer.jsp" />  
+    </definition>  
+   
+   <definition name="admin/*/*" extends="web.admin">
+           <put-attribute name="body" value="/WEB-INF/view/{1}/{2}.jsp" />  
+   </definition>
+   
+  
+<!--     <definition name="sunglasses" extends="web.user"> -->
+<!--            <put-attribute name="body" value="/WEB-INF/view/home/sunglasses.jsp" />   -->
+<!--    </definition> -->
+   
+<!--     <definition name="cart" extends="web.user"> -->
+<!--            <put-attribute name="body" value="/WEB-INF/view/cart/cart.jsp" />   -->
+<!--    </definition> -->
+   
+   
+   
+   
+  
+   
+  
+  
+</tiles-definitions> 
